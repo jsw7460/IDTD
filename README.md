@@ -43,20 +43,28 @@ Install the Python dependencies:
 pip install -r requirements.txt
 ```
 
-This code additionally depends on **JaxRLWorld**, which is not on PyPI.
-Obtain a JaxRLWorld checkout separately and make it importable in one of
-two ways:
+This code additionally depends on the **JaxRLWorld** framework (robot
+configs, simulators, policy loading), which is distributed as part of
+**SimForge**:
 
-* place it at `./JaxRLWorld` (the default the scripts look for), or
-* point `JAXRLWORLD_PATH` at your checkout:
+> https://github.com/jsw7460/SimForge
 
-  ```
-  export JAXRLWORLD_PATH=/path/to/JaxRLWorld
-  ```
+Follow SimForge's installation instructions (clone with submodules,
+install the simulators, then `pip install -e "JaxRLWorld/[all]"`). That
+installs the `jaxrlworld` package into your environment, which is all
+this code needs.
 
-Each script resolves the package root automatically (it looks for the
-directory that contains `consysid/`), so scripts can be run from any
-working directory once `consysid` and JaxRLWorld are importable.
+If `jaxrlworld` is not installed into your environment but you have a
+SimForge checkout on disk, point `JAXRLWORLD_PATH` at its `JaxRLWorld`
+directory instead:
+
+```
+export JAXRLWORLD_PATH=/path/to/SimForge/JaxRLWorld
+```
+
+Each script resolves the `consysid` package root automatically (it looks
+for the directory that contains `consysid/`), so scripts can be run from
+any working directory once `consysid` and `jaxrlworld` are importable.
 
 ## Pipeline
 
