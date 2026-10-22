@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDEs
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+
+# Experiment outputs / artifacts
+outputs/
+wandb/
+wandb_datasets/
+*.npz
+
+# JaxRLWorld is obtained separately (see README); never vendor it here
+/JaxRLWorld/

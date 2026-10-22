@@ -1,0 +1,9 @@
+# Core dependencies for the IDTD system-identification / active-exploration
+# code. JaxRLWorld is an additional dependency that is NOT installed from
+# PyPI — see the README for how to obtain it.
+numpy
+torch
+cma
+colorama
+matplotlib
+wandb
